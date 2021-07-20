@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 20px;
+        }
+
+        div {
+            padding: 3px;
+        }
+
+        input {
+            margin-left: 20px;
+        }
+
+        #subButton {
+            margin-top: 10px;
+            margin-left: 0px;
+            background-color: rgb(212, 68, 11);
+            font-weight: bold;
+            padding: 5px;
+            border: 2px;
+            border-radius: 10px;
+        }
+
+        .updates {
+            margin-left: -20px;
+        }
+
+        #radio {
+            margin-left: -22px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form action="/process" method="POST">
+        <div class="name">
+            <div>
+                <label for="firstname">First Name: *</label>
+                <input type="text" name="firstname" id="firstname">
+            </div>
+            <div>
+                <label for="lastname">Last Name: *</label>
+                <input type="text" name="lastname" id="lastname">
+            </div>
+        </div>
+        <div class="emailAddress">
+            <div>
+                <label for="emailaddress">Email Address: *</label>
+                <input type="email" name="emailaddress" id="emailaddress">
+            </div>
+        </div>
+        <div id="password">
+            <div>
+                <label for="password">Password: *</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div>
+                <label for="confirmpassword">Confirm Password: *</label>
+                <input type="password" name="confirmpassword" id="confirmpassword">
+            </div>
+        </div>
+        <div class="personalInfo">
+            <div>
+                <label for="birthdate">Birthday: </label>
+                <input type="date" name="birthdate" id="birthdate">
+            </div>
+            <div>
+                <label>Gender Identity: </label>
+                <div id="radio">
+                    <input type="radio" name="gId" value="Male" id="male"><label for="male">Male</label>
+                    <input type="radio" name="gId" value="Female" id="female"><label for="female">Female</label>
+                    <input type="radio" name="gId" value="Non-binary" id="nonbinary"><label
+                        for="nonbinary">Non-binary</label>
+                    <input type="radio" name="gId" value="I prefer not to answer" id="na" checked><label for="na">I
+                        prefer not to answer</label>
+                </div>
+            </div>
+            <div>
+                <label>A short description about myself:</label>
+                <div><textarea name="description" cols="35" rows="2"></textarea></div>
+            </div>
+            <div>
+                <label>Favorite Language: </label>
+                <select name="language" id="language">
+                    <option>JavaScript</option>
+                    <option>Java</option>
+                    <option>C++</option>
+                </select>
+            </div>
+        </div>
+        <div class="updates">
+            <div>
+                <input type="checkbox" name="updates" id="updates">
+                <label for="updates">Yes, I would like to receive periodic email updates</label>
+            </div>
+        </div>
+        <div class="subButton">
+            <input id="subButton" type="submit" value="Create Account">
+        </div>
+        <p>* Indicates a required field</p>
+    </form>
+</body>
+
+</html>
